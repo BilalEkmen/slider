@@ -1,0 +1,498 @@
+*{ margin: 0; padding: 0; box-sizing: border-box; font-family: 'Open Sans', sans-serif;}
+
+
+html,body{ min-height: 100dvh;}
+
+
+body._13 {
+    --main-blue-bg: #ececec;
+    --main-blue-bg-o: 255, 255, 255;
+    --main-blue-txt: #000000;
+    --main-blue-txt-o: 0, 173, 145;
+    --main-blue-border: #00000024;
+    --main-dark-blue-txt: #000000;
+    --main-dark-blue-txt-o: 0, 87, 72;
+    --main-red: #e3c759;
+    --main-red-o: 0, 87, 72;
+    --main-dark-red: #142421;
+}
+
+main{
+    min-height: calc(100dvh - 94px);
+    background-color: var(--main-blue-bg);
+    padding: 0 0px 150px;
+}
+
+
+/*
+-------------**************-------------
+---------------- Header ----------------
+-------------**************-------------
+*/
+header {
+    background-color: var(--white-bg);
+    border-bottom: 1px solid #c7cdd3;
+}
+
+.dp{
+    margin: 0 15px;
+}
+.bido-container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header > div {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header > div .logo-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+header > div .logo-area .open-left-nav {
+    display: none;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 1;
+}
+
+header > div .logo-area .go-back {
+    font-size: 20px;
+    color: var(--black-txt);
+    display: none;
+}
+
+header > div .logo-area .logo {
+}
+
+header > div .logo-area .logo img {
+    height: 25px;
+}
+
+header > div .search-area {
+}
+
+header > div .search-area .input-area {
+    border: 1px solid var(--main-blue-border);
+    background-color: var(--main-blue-bg);
+    display: flex;
+    height: 35px;
+    width: 270px;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+header > div .search-area .input-area .icon {
+    font-size: 13px;
+    width: 35px;
+    height: 35px;
+    margin: -2px 3px 0 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header > div .search-area .input-area input {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+
+header > div .search-area .input-area input:focus {
+    outline: none;
+}
+
+header > div .buttons {
+    display: flex;
+    gap: 20px;
+}
+
+header > div .buttons > div {
+    position: relative;
+}
+
+header > div .buttons > div > a {
+    color: var(--main-dark-blue-txt);
+    text-decoration: none;
+    cursor: pointer;
+    display: flex;
+    gap: 3px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+header > div .buttons > div > a .icon {
+    font-size: 20px;
+}
+
+header > div .buttons > div > a .txt {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* MY BASKET AREA */
+header > div .buttons > div > div {
+    z-index: 10;
+    opacity: 0;
+    height: 0;
+    pointer-events: none;
+    overflow: hidden;
+    position: absolute;
+    border: 1px solid var(--main-blue-border);
+    right: 0;
+    top: 100%;
+    width: 308px;
+    padding-bottom: 10px;
+    border-radius: 3px;
+    transition: all .3s ease-out;
+    background-color: var(--white-bg);
+}
+
+header > div .buttons > div > div.open {
+    height: 465px;
+    opacity: 1;
+    pointer-events: all;
+}
+
+header > div .buttons > div > div.open.free {
+    height: 323px;
+}
+
+header > div .buttons > div > div .header {
+    padding: 10px 10px;
+    background-color: rgba(var(--black-o), .03);
+    border-bottom: 1px solid rgba(var(--black-o), .1);
+}
+
+header > div .buttons > div > div .header strong {
+    font-size: 15px;
+}
+
+header > div .buttons > div > div .header span {
+    font-size: 12px;
+}
+
+header > div .buttons > div > div .products {
+    min-height: 281px;
+    max-height: 281px;
+    overflow-y: auto;
+    background-color: var(--white-bg);
+}
+
+header > div .buttons > div > div .products::-webkit-scrollbar {
+    width: 7px;
+    background-color: rgba(var(--black-o), .15);
+}
+
+header > div .buttons > div > div .products::-webkit-scrollbar-thumb {
+    background-color: var(--main-blue-txt);
+}
+
+header > div .buttons > div > div .products .product {
+    display: flex;
+    gap: 5px;
+    padding: 10px;
+    border-bottom: 1px solid rgba(var(--black-o), .15);
+}
+
+header > div .buttons > div > div .products .product .product-img {
+    width: 87px;
+    height: 120px;
+    min-width: 87px;
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 1px;
+    border: 1px solid rgba(var(--black-o), .15);
+}
+
+header > div .buttons > div > div .products .product .product-img img {
+    width: 100%;
+}
+
+header > div .buttons > div > div .products .product .product-detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    position: relative;
+}
+
+header > div .buttons > div > div .products .product .product-detail > span {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #bc2626;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: .4;
+    cursor: pointer;
+}
+
+header > div .buttons > div > div .products .product .product-detail > div.price {
+    cursor: default;
+}
+
+header > div .buttons > div > div .products .product .product-detail > div.price > b {
+    color: var(--main-dark-blue-txt);
+    font-size: 14px;
+    ;}
+
+header > div .buttons > div > div .products .product .product-detail > div.price > span {
+    color: rgba(var(--black-o), .6);
+    text-decoration: line-through;
+    font-size: 12px;
+}
+
+header > div .buttons > div > div .products .product .product-detail a {
+    text-decoration: none;
+    font-size: 12px;
+    color: rgba(var(--black-o), 1);
+    max-height: 196px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+
+header > div .buttons > div > div .products .product .product-detail a b {
+    font-size: 14px;
+    color: var(--black-txt);
+    transition: all .2s;
+}
+
+header > div .buttons > div > div .products .product .product-detail a:hover b {
+    color: var(--main-red);
+}
+
+header > div .buttons > div > div .products .product .product-detail > div.info {
+    display: flex;
+    gap: 2px;
+    font-size: 12px;
+    cursor: default;
+}
+
+header > div .buttons > div > div .products .empty-basket {
+    min-height: 282px;
+    max-height: 282px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+header > div .buttons > div > div .products .empty-basket > div {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    border: 4px solid var(--black-txt);
+    color: var(--black-txt);
+    /*display: flex; align-items: center; justify-content: center;*/
+    padding: 14px 0 0 9.5px;
+    font-size: 18px;
+}
+
+header > div .buttons > div > div .products .empty-basket > b {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+header > div .buttons > div > div .products .empty-basket > span {
+    font-size: 12px;
+    color: rgba(var(--black-o), .7);
+    text-align: center;
+}
+
+header > div .buttons > div > div .pay {
+    padding: 10px;
+    background-color: var(--white-bg);
+    width: 100%;
+    border-top: 1px solid rgba(var(--black-o), .15);
+}
+
+header > div .buttons > div > div .pay > div {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    font-size: 14px;
+}
+
+header > div .buttons > div > div .pay .buy {
+    display: inline-block;
+    width: 100%;
+    padding: 10px 0;
+    margin: 10px 0;
+    background-color: var(--main-blue-txt);
+    border: 2px solid var(--main-blue-txt);
+    color: var(--white-txt);
+    font-weight: 700;
+    text-align: center;
+    border-radius: 5px;
+    transition: all .2s ease;
+    text-decoration: none;
+}
+
+header > div .buttons > div > div .pay .buy:hover {
+    background-color: var(--white-bg);
+    color: var(--main-blue-txt);
+    cursor: pointer;
+}
+
+header > div .buttons > div > div .pay .continue {
+    display: block;
+    width: fit-content;
+    margin: 3px auto 0;
+    font-size: 12px;
+    color: var(--main-blue-txt);
+    text-decoration: underline;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.vertical-sidebar {
+    border-radius: 10px;
+    width: calc(100% - 20px);
+    margin: 0 auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+    flex-wrap: nowrap !important;
+    background-color: white;
+    border: 1px solid var(--main-blue-border);
+}
+
+.vertical-sidebar::-webkit-scrollbar {
+    display: none;
+    border-radius: 0 0 10px 10px;
+    background-color: #ddd;
+    height: 3px;
+}
+
+.vertical-sidebar::-webkit-scrollbar-thumb {
+    border-radius: 0 0 10px 10px;
+    background-color: var(--main-blue-txt);
+}
+
+.vertical-sidebar > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.vertical-sidebar > div > a {
+    transition: all .2s ease;
+    position: relative;
+    text-decoration: none;
+    text-align: center;
+    padding: 7px 15px;
+    display: flex;
+    gap: 3px;
+    white-space: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    color: var(--main-blue-txt);
+    font-size: 13px;
+}
+
+.vertical-sidebar > div > a.active {
+    color: var(--main-red);
+}
+
+.vertical-sidebar > div > a.active::before {
+    transform: translateX(-50%) translateY(7px);
+}
+
+.vertical-sidebar > div > a:hover {
+    color: var(--main-red);
+}
+
+.vertical-sidebar > div > a::before, .vertical-sidebar > div > a::after {
+    transition: all .2s ease;
+    content: '';
+    display: inline-block;
+    width: calc(100% - 20px);
+    position: absolute;
+    left: 50%;
+    height: 6px;
+    background-color: var(--main-red);
+}
+
+.vertical-sidebar > div > a::before {
+    top: 100%;
+    transform: translateX(-50%) translateY(10px);
+    border-radius: 6px 6px 0 0;
+}
+
+.vertical-sidebar > div > a::after {
+    bottom: 100%;
+    transform: translateX(-50%) translateY(-10px);
+    border-radius: 0 0 6px 6px;
+}
+
+/* .vertical-sidebar > div > a:hover::before{ transform: translateX(-50%) translateY(5px);} */
+.vertical-sidebar > div > a:not(:last-child) {
+    border-right: 1px solid rgba(var(--main-blue-txt-o), .1);
+}
+
+.vertical-sidebar > div > a i {
+    font-size: 16px;
+    margin-right: 5px;
+}
+
+@media screen and (max-width: 660px) {
+    .vertical-sidebar {
+        width: 100%;
+        border-radius: 0;
+    }
+}
+
+
+
+
+
+
+
+/*------------------------------------------*/
+/*-------------- CUSTOM SLIDER -------------*/
+/*------------------------------------------*/
+.custom-slider{ position: relative;}
+.custom-slider .pagination-area{ }
+.custom-slider .pagination-area .swiper-pagination{ }
+.custom-slider .pagination-area .swiper-pagination .swiper-pagination-bullet{ width: 20px; height: 5px; background-color: #000000; opacity: .3; border-radius: 2px;}
+.custom-slider .pagination-area .swiper-pagination .swiper-pagination-bullet-active{ background-color: var(--main-red); opacity: 1;}
+.custom-slider .slider-arr{ font-size: 30px; padding: 2px 5px; color: var(--main-red); cursor: pointer; position: absolute; top: 50%; transform: translateY(-50%); z-index: 2;}
+.custom-slider .slider-arr i{}
+.custom-slider .slider-arr.slider-prev{ left: 20px;}
+.custom-slider .slider-arr.slider-next{ right: 20px;}
+.custom-slider [data-arrow-hover] .slider-arr.slider-prev{ opacity: 0; transform: translateX(-20px);}
+.custom-slider [data-arrow-hover] .slider-arr.slider-next{ opacity: 0; transform: translateX(20px);}
+.custom-slider .swiper{ border-radius: var(--rounded); overflow: hidden;}
+.custom-slider .swiper-wrapper{}
+.custom-slider .swiper-slide{}
+.custom-slider .swiper-slide .bg{ display: flex; align-items: center; justify-content: center; overflow: hidden; border-radius: var(--rounded);}
+.custom-slider .swiper-slide .bg img{ width: 100%; height: 100%; object-fit: cover;}
+
+
+
+
+
+
+

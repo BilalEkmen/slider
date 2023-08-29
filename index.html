@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&amp;display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <!-- SWIPER -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+</head>
+
+<body class="_13">
+    <header>
+        <div>
+            <div class="logo-area">
+                <span class="open-left-nav"><i class="fa-solid fa-bars"></i></span>
+                <a href="javascript:window.history.back();" class="go-back"><i class="fa-solid fa-angle-left"></i></a>
+                <a href="/" class="logo">
+
+                    <img src="https://go.kiraz.co/storage/panellogos/NNAgNzGhpLU6NSdUg1K1ueHpE_SVelRB7Uvh0kZdVFz9RnK1yBa.jpeg"
+                        alt="Kiraz.co">
+                </a>
+            </div>
+            <div class="search-area">
+                <div class="input-area">
+                    <span class="icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+                    <input id="searchTerm" type="text" placeholder="Ürün Ara...">
+                </div>
+            </div>
+            <div class="buttons">
+                <div>
+                    <a class="web" href="/login">
+                        <span class="icon"><i class="fa-solid fa-user"></i></span>
+                        <span class="txt">Giriş</span>
+                    </a>
+                </div>
+                <div>
+                    <a href="login">
+                        <span class="icon"><i class="fa-solid fa-heart"></i></span>
+                        <span class="txt">Favori</span>
+                    </a>
+                </div>
+
+                <input type="hidden" name="_token" value="t1D501hPbwyxo4r6y4ljBz05Ep7Ll9aa8CZcdsCN">
+                <div>
+                    <a href="/my-basket" class="my-basket-btn">
+                        <span class="icon"><i class="fa-solid fa-basket-shopping"></i></span>
+                        <span class="txt">Sepetim</span>
+                        <span id="basket_item_count"
+                            style="position:absolute; right: 2px; font-size: 10px; background: red; color: #fff; width: 15px; height: 15px; line-height: 15px; top: 0px; text-align:center; border-radius:50%">0</span>
+                    </a>
+                    <div id="my-basket-container">
+                        <div class="header">
+                            <strong>Sepetim </strong><span><span id="basket-product-count">0</span> Ürün</span>
+                        </div>
+                        <div class="products" id="my-basket-products">
+                        </div>
+                        <div class="pay">
+                            <div>
+                                <span>Toplam Fiyat</span>
+                                <b class="basket-total-price">₺0</b>
+                            </div>
+                            <a href="/my-basket" class="buy">Satın Al</a>
+                            <a class="continue" id="continue-shopping">Alışverişe Devam Et</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="nav vertical-sidebar">
+        <div>
+            <a href="/" class="active"><i class="fa-solid fa-house"></i>Anasayfa</a>
+            <a href="/c"><i class="fa-solid fa-folder-tree"></i>Kategoriler</a>
+            <a href="/evaluations"><i class="fa-solid fa-star"></i>Değerlendirmeler</a>        
+            <a href="/videos"><i class="fa-solid fa-video"></i>Videolar</a>
+            <a href="/kampanya-urunleri"><i class="fa-solid fa-tag"></i>Kampanyalı ürünler</a>
+            <a href="/cok-satanlar"><i class="fa-solid fa-user-tie"></i>En çok satanlar</a>   
+        </div>
+    </div>
+
+    <main>
+
+        <div class="custom-slider swiper-slider">
+            <div class="swiper">
+                <div class="swiper-wrapper" data-arrow-hover data-default="1" data-md="1" data-lg="1" data-xl="1" data-space="10" data-loop="true">
+                    <div class="swiper-slide">
+                        <div class="bg">
+                            <img src="./assets/img/banner-1.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="bg">
+                            <img src="./assets/img/banner-2.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="bg">
+                            <img src="./assets/img/banner-3.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+                
+            <div class="pagination-area">
+                <div class="swiper-pagination"></div>
+            </div>
+
+            <div class="slider-prev slider-arr"><i class="fa-solid fa-angle-left"></i></div>
+            <div class="slider-next slider-arr"><i class="fa-solid fa-angle-right"></i></div>
+        </div>
+
+        <br><br><br><br><br><br>
+        
+        <div class="dp">
+            <div class="bido-container">
+                <div class="custom-slider swiper-slider" style="--rounded: 10px;">
+                    <div class="swiper">
+                        <div class="swiper-wrapper" data-default="1" data-md="1" data-lg="1" data-xl="1" data-space="25" data-loop="true">
+                            <div class="swiper-slide">
+                                <div class="bg">
+                                    <img src="./assets/img/banner-1.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="bg">
+                                    <img src="./assets/img/banner-2.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="bg">
+                                    <img src="./assets/img/banner-3.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="pagination-area">
+                        <div class="swiper-pagination"></div>
+                    </div>
+
+                    <div class="slider-prev slider-arr"><i class="fa-solid fa-angle-left"></i></div>
+                    <div class="slider-next slider-arr"><i class="fa-solid fa-angle-right"></i></div>
+                </div>
+            </div>
+        </div>
+        
+        <br><br><br><br><br>
+        
+        <div class="dp">
+            <div class="bido-container">
+                <div class="custom-slider swiper-slider" style="--rounded: 10px;">
+                    <div class="swiper">
+                        <div class="swiper-wrapper" data-default="1" data-md="1" data-lg="1" data-xl="2" data-space="10" data-loop="true">
+                            <div class="swiper-slide">
+                                <div class="bg">
+                                    <img src="./assets/img/banner-1.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="bg">
+                                    <img src="./assets/img/banner-2.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="bg">
+                                    <img src="./assets/img/banner-3.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="bg">
+                                    <img src="./assets/img/banner-4.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <br><br><br><br><br>
+        
+        <div class="dp">
+            <div class="bido-container">
+                <div class="custom-slider swiper-slider" style="--rounded: 10px;">
+                    <div class="swiper">
+                        <div class="swiper-wrapper" data-default="1" data-md="1" data-lg="2" data-xl="3" data-space="10" data-loop="true">
+                            <div class="swiper-slide">
+                                <div class="bg">
+                                    <img src="./assets/img/banner-1.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="bg">
+                                    <img src="./assets/img/banner-2.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="bg">
+                                    <img src="./assets/img/banner-3.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="bg">
+                                    <img src="./assets/img/banner-4.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="bg">
+                                    <img src="./assets/img/banner-5.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="bg">
+                                    <img src="./assets/img/banner-6.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./assets/js/app.js"></script>
+<script>
+    let customSliders = document.querySelectorAll('.custom-slider')
+    let customSlidersArr = {}
+    customSliders.forEach((swiperSlider, idx) => {
+        let swiperWrapper = swiperSlider.querySelector('.swiper-wrapper')
+        customSlidersArr['swiperSlider' + (idx + 1)] = new Swiper(swiperSlider.querySelector('.swiper') , {
+            spaceBetween: swiperWrapper.dataset.space,
+            loop: swiperWrapper.dataset.loop,
+
+            pagination: {
+                el: swiperWrapper.parentNode.parentNode.querySelector('.swiper-pagination'),
+                clickable: true
+            },
+
+            navigation: {
+                nextEl: swiperWrapper.parentNode.parentNode.querySelector('.slider-next'),
+                prevEl: swiperWrapper.parentNode.parentNode.querySelector('.slider-prev'),
+            },
+            
+            breakpoints: {
+                1280: {
+                    slidesPerView: swiperWrapper.dataset.xl,
+                },
+                1024: {
+                    slidesPerView: swiperWrapper.dataset.lg,
+                },
+                768: {
+                    slidesPerView: swiperWrapper.dataset.md,
+                },
+                0:{
+                    slidesPerView: swiperWrapper.dataset.default,
+                }
+            }
+
+        });
+    })
+</script>
+</html>
