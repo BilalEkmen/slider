@@ -474,16 +474,19 @@ header > div .buttons > div > div .pay .continue {
 /*-------------- CUSTOM SLIDER -------------*/
 /*------------------------------------------*/
 .custom-slider{ position: relative;}
-.custom-slider .pagination-area{ }
+.custom-slider .pagination-area .swiper-pagination{ transition: all .2s ease; }
+.custom-slider[data-arrow-hover] .pagination-area .swiper-pagination{ opacity: 0; transform: translateY(20px);}
+.custom-slider[data-arrow-hover]:hover .pagination-area .swiper-pagination{ opacity: 1; transform: translateY(0);}
 .custom-slider .pagination-area .swiper-pagination{ }
 .custom-slider .pagination-area .swiper-pagination .swiper-pagination-bullet{ width: 20px; height: 5px; background-color: #000000; opacity: .3; border-radius: 2px;}
 .custom-slider .pagination-area .swiper-pagination .swiper-pagination-bullet-active{ background-color: var(--main-red); opacity: 1;}
-.custom-slider .slider-arr{ font-size: 30px; padding: 2px 5px; color: var(--main-red); cursor: pointer; position: absolute; top: 50%; transform: translateY(-50%); z-index: 2;}
-.custom-slider .slider-arr i{}
+.custom-slider .slider-arr{ transition: all .2s ease; font-size: 30px; padding: 2px 5px; color: var(--main-red); cursor: pointer; position: absolute; top: 50%; transform: translateY(-50%); z-index: 2;}
 .custom-slider .slider-arr.slider-prev{ left: 20px;}
 .custom-slider .slider-arr.slider-next{ right: 20px;}
-.custom-slider [data-arrow-hover] .slider-arr.slider-prev{ opacity: 0; transform: translateX(-20px);}
-.custom-slider [data-arrow-hover] .slider-arr.slider-next{ opacity: 0; transform: translateX(20px);}
+.custom-slider[data-arrow-hover] .slider-prev{opacity: 0; left: 0;}
+.custom-slider[data-arrow-hover] .slider-next{ opacity: 0; right: 0;}
+.custom-slider[data-arrow-hover]:hover .slider-prev{ opacity: 1; left: 20px;}
+.custom-slider[data-arrow-hover]:hover .slider-next{ opacity: 1; right: 20px;}
 .custom-slider .swiper{ border-radius: var(--rounded); overflow: hidden;}
 .custom-slider .swiper-wrapper{}
 .custom-slider .swiper-slide{}
@@ -494,5 +497,10 @@ header > div .buttons > div > div .pay .continue {
 
 
 
+
+
+@media screen and (max-width: 998px) {
+    header{ display: none;}
+}
 
 
