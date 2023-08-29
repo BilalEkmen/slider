@@ -127,11 +127,11 @@
                 <div class="custom-slider swiper-slider" style="--rounded: 10px;">
                     <div class="swiper">
                         <div class="swiper-wrapper" data-default="1" data-md="1" data-lg="1" data-xl="1" data-space="25" data-loop="true">
-                            <div class="swiper-slide">
+                            <a href="https://www.google.com" class="swiper-slide">
                                 <div class="bg">
                                     <img src="./assets/img/banner-1.jpg" alt="">
                                 </div>
-                            </div>
+                            </a>
                             <div class="swiper-slide">
                                 <div class="bg">
                                     <img src="./assets/img/banner-2.jpg" alt="">
@@ -194,7 +194,7 @@
             <div class="bido-container">
                 <div class="custom-slider swiper-slider" style="--rounded: 10px;">
                     <div class="swiper">
-                        <div class="swiper-wrapper" data-default="1" data-md="1" data-lg="2" data-xl="3" data-space="10" data-loop="true">
+                        <div class="swiper-wrapper" data-default="1.6" data-md="2" data-lg="2.5" data-xl="3" data-space="10" data-loop="true">
                             <div class="swiper-slide">
                                 <div class="bg">
                                     <img src="./assets/img/banner-1.jpg" alt="">
@@ -223,6 +223,34 @@
                             <div class="swiper-slide">
                                 <div class="bg">
                                     <img src="./assets/img/banner-6.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <br><br><br><br><br>
+        
+        <div class="dp">
+            <div class="bido-container">
+                <div class="custom-slider swiper-slider" data-moile-column style="--rounded: 10px;">
+                    <div class="swiper">
+                        <div class="swiper-wrapper" data-default="1" data-md="2" data-lg="2.5" data-xl="3" data-space="10">
+                            <div class="swiper-slide">
+                                <div class="bg">
+                                    <img src="./assets/img/banner-1.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="bg">
+                                    <img src="./assets/img/banner-2.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="bg">
+                                    <img src="./assets/img/banner-3.jpg" alt="">
                                 </div>
                             </div>
                         </div>
@@ -263,12 +291,13 @@
                 },
                 768: {
                     slidesPerView: swiperWrapper.dataset.md,
+                    allowTouchMove: true,
                 },
                 0:{
                     slidesPerView: swiperWrapper.dataset.default,
+                    allowTouchMove: swiperWrapper.parentNode.parentNode.dataset.moileColumn == '' ? false : true
                 }
             }
-
         });
     })
 </script>

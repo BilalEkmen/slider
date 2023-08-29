@@ -35,7 +35,7 @@ header {
 }
 
 .dp{
-    margin: 0 15px;
+    margin: 0 10px;
 }
 .bido-container{
     width: 100%;
@@ -473,10 +473,10 @@ header > div .buttons > div > div .pay .continue {
 /*------------------------------------------*/
 /*-------------- CUSTOM SLIDER -------------*/
 /*------------------------------------------*/
-.custom-slider{ position: relative;}
+.custom-slider{ position: relative; overflow: hidden;}
 .custom-slider .pagination-area .swiper-pagination{ transition: all .2s ease; }
-.custom-slider[data-arrow-hover] .pagination-area .swiper-pagination{ opacity: 0; transform: translateY(20px);}
-.custom-slider[data-arrow-hover]:hover .pagination-area .swiper-pagination{ opacity: 1; transform: translateY(0);}
+.custom-slider[data-pagination-hover] .pagination-area .swiper-pagination{ opacity: 0; transform: translateY(20px);}
+.custom-slider[data-pagination-hover]:hover .pagination-area .swiper-pagination{ opacity: 1; transform: translateY(0);}
 .custom-slider .pagination-area .swiper-pagination{ }
 .custom-slider .pagination-area .swiper-pagination .swiper-pagination-bullet{ width: 20px; height: 5px; background-color: #000000; opacity: .3; border-radius: 2px;}
 .custom-slider .pagination-area .swiper-pagination .swiper-pagination-bullet-active{ background-color: var(--main-red); opacity: 1;}
@@ -501,6 +501,21 @@ header > div .buttons > div > div .pay .continue {
 
 @media screen and (max-width: 998px) {
     header{ display: none;}
+}
+
+@media screen and (max-width: 768px) {
+    .custom-slider[data-moile-column] .swiper-wrapper{ display: flex; flex-direction: column; gap: 10px;}
+
+    .custom-slider .slider-arr{ font-size: 15px;}
+    .custom-slider .slider-arr.slider-prev{ left: 5px;}
+    .custom-slider .slider-arr.slider-next{ right: 5px;}
+    .custom-slider[data-arrow-hover] .slider-prev{opacity: 0; left: 0;}
+    .custom-slider[data-arrow-hover] .slider-next{ opacity: 0; right: 0;}
+    .custom-slider[data-arrow-hover]:hover .slider-prev{ opacity: 1; left: 5px;}
+    .custom-slider[data-arrow-hover]:hover .slider-next{ opacity: 1; right: 5px;}
+
+    .custom-slider .pagination-area .swiper-pagination{ bottom: 2px;}
+    .custom-slider .pagination-area .swiper-pagination .swiper-pagination-bullet{ width: 12px; height: 3px; margin: 0 3px;}
 }
 
 
